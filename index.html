@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Список задач — Todo-list</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <h1>Список задач</h1>
+    </div>
+  </header>
+
+  <main class="wrap main">
+    <section class="new-task-card" aria-labelledby="newtasklabel">
+      <h2 id="newtasklabel">Новая задача</h2>
+      <div class="form-row">
+        <input type="text" placeholder="Название задачи..." aria-label="Название задачи" disabled>
+        <button class="btn btn-primary" disabled>+ Добавить</button>
+      </div>
+    </section>
+
+    <section class="board" aria-label="Доска задач">
+      <!-- Backlog -->
+      <div class="column" data-column="backlog" aria-labelledby="backlogTitle">
+        <div class="col-card">
+          <div class="col-title">
+            <div id="backlogTitle" class="col-label">Бэклог</div>
+          </div>
+          <div class="tasks">
+            <div class="task">Выучить JS</div>
+            <div class="task">Выучить React</div>
+            <div class="task">Сделать домашку</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- In Progress -->
+      <div class="column" data-column="inprogress" aria-labelledby="inprogressTitle">
+        <div class="col-card">
+          <div class="col-title">
+            <div id="inprogressTitle" class="col-label">В процессе</div>
+          </div>
+          <div class="tasks">
+            <div class="task">Выпить смузи</div>
+            <div class="task">Попить воды</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Done -->
+      <div class="column" data-column="done" aria-labelledby="doneTitle">
+        <div class="col-card">
+          <div class="col-title">
+            <div id="doneTitle" class="col-label">Готово</div>
+          </div>
+          <div class="tasks">
+            <div class="task">Позвонить маме</div>
+            <div class="task">Погладить кота</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trash -->
+      <div class="column" data-column="trash" aria-labelledby="trashTitle">
+        <div class="col-card">
+          <div class="col-title">
+            <div id="trashTitle" class="col-label">Корзина</div>
+          </div>
+          <div class="tasks">
+            <div class="task">Сходить погулять</div>
+            <div class="task">Прочитать «Войну и мир»</div>
+          </div>
+
+          <div class="trash-actions">
+            <button class="btn btn-danger" disabled>✕ Очистить</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
